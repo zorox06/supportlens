@@ -1,0 +1,15 @@
+local_config.py
+.env*
+*.env
+.venv/
+venv/
+__pycache__/
+*.pyc
+.git/
+.pytest_cache/
+runtime/
+*.log
+tests/
+.idea/
+.vscode/
+chroma_db/

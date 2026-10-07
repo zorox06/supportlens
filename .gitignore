@@ -1,0 +1,42 @@
+# Local configuration & credentials
+local_config.py
+.env
+.env.*
+*.env
+!.env.example
+.streamlit/secrets.toml
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python cache & bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
+
+# Logs & runtime artifacts
+runtime/
+*.log
+
+# Chroma / Vector DB local artifacts
+chroma_db/
+*.parquet
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo

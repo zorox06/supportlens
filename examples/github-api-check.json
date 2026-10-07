@@ -1,0 +1,42 @@
+{
+  "repo": "pallets/flask",
+  "total_matches": 59,
+  "issues": [
+    {
+      "number": 6055,
+      "title": "Dependency Health Check",
+      "state": "closed",
+      "url": "https://github.com/pallets/flask/issues/6055",
+      "excerpt": "Audited by Dep Auditor. Requirements.txt packages: amqp v5.3.1|async-timeout v5.0.1|billiard v4.2.4|blinker v1.9.0|celery v5.6.3"
+    },
+    {
+      "number": 6123,
+      "title": "`stream_with_context`: abandoned generator leaves the app context current on the worker thread; later requests skip `teardown_appcontext`",
+      "state": "closed",
+      "url": "https://github.com/pallets/flask/issues/6123",
+      "excerpt": "`stream_with_context` pushes the request's contexts onto whichever thread iterates the response body, and pops them only if the generator completes or is closed on that same thread. When a client disconnects mid-stream, the server abandons the body iterator and GC finalizes it later \u2014 often on a different thread. That cross-context pop fails (`LookupError`/`ValueError` from `ContextVar.reset`, swallowed as \"Exception ignored in ...\"), and the app context stays current on the worker thread.\n\nBecause `RequestContext.push` reuses an ambient app context of the same app, every later request on that pooled thread runs under the stuck context and `teardown_appcontext` never fires for it. Anything keyed to the app context then leaks once per thread for the life of the process \u2014 with Flask-SQLAlche"
+    },
+    {
+      "number": 6056,
+      "title": "Dependency Audit \u2014 check for outdated packages",
+      "state": "closed",
+      "url": "https://github.com/pallets/flask/issues/6056",
+      "excerpt": "## Dependency Health Check\n\nAutomated audit by [Dep Auditor](https://github.com/shunfeng8421/dep-auditor).\n\n### Packages Found (requirements.txt)\n\n- **amqp** v5.3.1 (last release: 2024-11-12)\n- **async-timeout** v5.0.1 (last release: 2024-11-06)\n- **billiard** v4.2.4 (last release: 2025-11-30)\n- **blinker** v1.9.0 (last release: 2024-11-08)\n- **celery** v5.6.3 (last release: 2026-03-26)\n\n### Recommended Actions\n1. Check if any package has been abandoned (no releases in 2+ years)\n2. Consider replacing abandoned packages with maintained alternatives\n3. Run Package                                  Version   Latest   Type\n---------------------------------------- --------- -------- -----\naiofiles                                 24.1.0    25.1.0   wheel\naiohttp                                  3"
+    },
+    {
+      "number": 5427,
+      "title": "Keep code running after response has been sent. (To respond with HTTP requests to other servers) ",
+      "state": "closed",
+      "url": "https://github.com/pallets/flask/issues/5427",
+      "excerpt": "Ability to send a response but continue execution.\r\n\r\nAn example of this problem is a backend Flask server which receives requests from another backend server, and returns one or more responses at different points in time. One such example is Telegram API.\r\n\r\nhttps://core.telegram.org/bots/faq#how-can-i-make-requests-in-response-to-updates\r\n\r\nWhile it is possible to simply send data back as an HTTP response, it is sometimes desirable to close the HTTP connection with a 200 to acknowledge the message has been received, and reopen a new connection for each response.\r\n\r\nHere are some scenarios where this technique might be useful:\r\n\r\n- Multiple messages are sent in a progressively more detailed nature, to ensure that errors in complex responses don't compromise simple responses. For example R"
+    },
+    {
+      "number": 5863,
+      "title": "Modern CSRF Protection Using `Sec-Fetch-Site` Header",
+      "state": "closed",
+      "url": "https://github.com/pallets/flask/issues/5863",
+      "excerpt": "Flask's documentation states that CSRF protection requires a form validation framework (which Flask doesn't provide), necessitating one-time tokens stored in cookies and transmitted with form data. However, modern browsers now support `Sec-Fetch-Site` headers, making token-based CSRF protection unnecessary. Rails just merged this approach in [rails/rails#56350](https://github.com/rails/rails/pull/56350). Flask should offer a similar modern solution\u2014but in a more Flask-like way: as a simple argument to `@app.route()`.\n\n## Current State\n\nFrom Flask's security documentation:\n\n> \"Why does Flask not do that for you? The ideal place for this to happen is the form validation framework, which does not exist in Flask.\"\n\nThis was written when CSRF tokens were the only viable protection mechanism. Th"
+    }
+  ],
+  "note": "Matches are leads, not proof that the reported problem has the same cause."
+}

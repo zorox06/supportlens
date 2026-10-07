@@ -1,0 +1,263 @@
+{
+  "query": "My printer has a paper jam. How do I repair it?",
+  "understanding": {
+    "category": "product_usage",
+    "search_query": "printer paper jam repair fix",
+    "brief": "Customer needs assistance repairing a paper jam in their printer.",
+    "check_known_issues": false
+  },
+  "search_query": "printer hardware paper jam repair instructions guide troubleshoot",
+  "sources": [
+    {
+      "chunk": 7,
+      "id": "D-167c087a",
+      "source": "DeskSync_support_policy.md",
+      "text": "## Billing and cancellations\nCustomers can request cancellation through their organization's subscription administrator. Refund requests must be reviewed by the billing team against the signed customer agreement. This policy does not provide a universal refund period or automatic refund eligibility. The assistant must not promise a refund or quote an undocumented price.\n\n## Escalation\nIf documented troubleshooting does not resolve an issue, prepare a ticket containing product version, operating system, exact symptoms, error codes, impact, attempted steps and relevant diagnostic evidence. Do not claim the ticket was submitted unless an actual submission system confirms it. Never include authentication secrets or unredacted personal content.",
+      "similarity": 0.5944
+    },
+    {
+      "source": "DeskSync_manual.md",
+      "id": "D-b73ce50c",
+      "chunk": 1,
+      "text": "# DeskSync product manual\n\nThis is sample documentation for the fictional DeskSync desktop collaboration product. Its settings and error codes are for this demonstration only.\n\n## Installation requirements\nDeskSync 2.4 requires Windows 11 or macOS 13 or newer, 500 MB of available disk space, and a working internet connection for sign-in. Download the installer from your organization's approved software portal. After installation, launch DeskSync and sign in with your organization account. Administrative privileges may be required by your organization's device policy.",
+      "similarity": 0.5919
+    },
+    {
+      "chunk": 4,
+      "source": "DeskSync_manual.md",
+      "id": "D-cbd85f06",
+      "text": "## Sign-in and two-factor authentication\nUse the Forgot password option on the organization sign-in page to begin the approved recovery process. If an authentication code is rejected, check that the device clock is synchronized and try a fresh code. Do not share passwords, authentication codes or recovery codes with support. If the account is locked, contact the organization administrator; DeskSync support cannot unlock organization accounts.",
+      "similarity": 0.5726
+    },
+    {
+      "source": "DeskSync_support_policy.md",
+      "id": "D-c19e6177",
+      "chunk": 6,
+      "text": "# DeskSync support policy\n\nThis sample policy applies only to the fictional DeskSync demonstration product.\n\n## Support scope\nThe support team assists with installation, documented sign-in behavior, connectivity and workspace sync. Organization account unlocks and network allow-list changes must be performed by the customer's organization administrator. Desktop hardware failures and unrelated software are outside DeskSync support scope.\n\n## Response targets\nStandard support aims to acknowledge requests within two business days. This is an acknowledgement target, not a resolution guarantee. Priority severity is assigned after support reviews business impact. The agent can draft a ticket but cannot assign a confirmed service-level commitment.",
+      "similarity": 0.5724
+    },
+    {
+      "id": "D-c2f77e01",
+      "chunk": 2,
+      "source": "DeskSync_manual.md",
+      "text": "## Error E104 connection timeout\nE104 means DeskSync could not reach its organization sync service within 30 seconds. First confirm your internet connection works by opening your organization's portal in the browser. In DeskSync, open Settings, then Connection, and choose Test connection. If you are using a VPN, check whether your organization requires it for the sync service. Do not disable required security software. Ask your IT administrator to verify access to the organization sync endpoint. Use Help, Diagnostics, Export diagnostic report to collect the connection result for support. A successful connection test followed by a completed sync verifies recovery.",
+      "similarity": 0.571
+    }
+  ],
+  "assessment": {
+    "sufficient": false,
+    "relevant_ids": [],
+    "reason": "The retrieved passages discuss billing, installation, sign-in, and connection errors for a software product called DeskSync, but do not contain any instructions or information regarding printer paper jam repair.",
+    "missing_information": [
+      "Printer model and manufacturer instructions",
+      "Steps for accessing the paper path to clear a jam",
+      "Safety guidelines for clearing hardware jams"
+    ]
+  },
+  "trace": [
+    {
+      "node": "classify",
+      "detail": "Gemini interpreted the issue and generated a retrieval query.",
+      "result": {
+        "category": "product_usage",
+        "search_query": "printer paper jam repair fix",
+        "brief": "Customer needs assistance repairing a paper jam in their printer.",
+        "check_known_issues": false
+      }
+    },
+    {
+      "node": "retrieve",
+      "tool": "search_manuals",
+      "args": {
+        "query": "printer paper jam repair fix"
+      },
+      "result": [
+        {
+          "source": "DeskSync_manual.md",
+          "chunk": 1,
+          "id": "D-b73ce50c",
+          "text": "# DeskSync product manual\n\nThis is sample documentation for the fictional DeskSync desktop collaboration product. Its settings and error codes are for this demonstration only.\n\n## Installation requirements\nDeskSync 2.4 requires Windows 11 or macOS 13 or newer, 500 MB of available disk space, and a working internet connection for sign-in. Download the installer from your organization's approved software portal. After installation, launch DeskSync and sign in with your organization account. Administrative privileges may be required by your organization's device policy.",
+          "similarity": 0.5564
+        },
+        {
+          "id": "D-167c087a",
+          "source": "DeskSync_support_policy.md",
+          "chunk": 7,
+          "text": "## Billing and cancellations\nCustomers can request cancellation through their organization's subscription administrator. Refund requests must be reviewed by the billing team against the signed customer agreement. This policy does not provide a universal refund period or automatic refund eligibility. The assistant must not promise a refund or quote an undocumented price.\n\n## Escalation\nIf documented troubleshooting does not resolve an issue, prepare a ticket containing product version, operating system, exact symptoms, error codes, impact, attempted steps and relevant diagnostic evidence. Do not claim the ticket was submitted unless an actual submission system confirms it. Never include authentication secrets or unredacted personal content.",
+          "similarity": 0.5545
+        },
+        {
+          "id": "D-c2f77e01",
+          "source": "DeskSync_manual.md",
+          "chunk": 2,
+          "text": "## Error E104 connection timeout\nE104 means DeskSync could not reach its organization sync service within 30 seconds. First confirm your internet connection works by opening your organization's portal in the browser. In DeskSync, open Settings, then Connection, and choose Test connection. If you are using a VPN, check whether your organization requires it for the sync service. Do not disable required security software. Ask your IT administrator to verify access to the organization sync endpoint. Use Help, Diagnostics, Export diagnostic report to collect the connection result for support. A successful connection test followed by a completed sync verifies recovery.",
+          "similarity": 0.5503
+        },
+        {
+          "source": "DeskSync_manual.md",
+          "chunk": 4,
+          "id": "D-cbd85f06",
+          "text": "## Sign-in and two-factor authentication\nUse the Forgot password option on the organization sign-in page to begin the approved recovery process. If an authentication code is rejected, check that the device clock is synchronized and try a fresh code. Do not share passwords, authentication codes or recovery codes with support. If the account is locked, contact the organization administrator; DeskSync support cannot unlock organization accounts.",
+          "similarity": 0.5424
+        },
+        {
+          "chunk": 5,
+          "id": "D-47ebc471",
+          "source": "DeskSync_manual.md",
+          "text": "## Diagnostics and support\nDiagnostic reports include the application version, operating system, connection test result and error codes. Review a report before sharing and remove personal file names or private content. A support request should include the DeskSync version, operating system, exact error, time of failure, attempted steps and a redacted diagnostic report. Support may request the organization identifier, but never a password or authentication code.",
+          "similarity": 0.5389
+        }
+      ],
+      "detail": "Retrieved Chroma passages using Gemini semantic embeddings."
+    },
+    {
+      "node": "assess",
+      "detail": "Gemini assessed whether the evidence supports a solution.",
+      "result": {
+        "sufficient": false,
+        "relevant_ids": [],
+        "reason": "The retrieved passages are about DeskSync software installation, connection timeouts, sign-in, and support policies, which are completely unrelated to hardware printers or paper jam repair.",
+        "missing_information": [
+          "printer model and manufacturer",
+          "step-by-step instructions for clearing paper jams for the specific printer model"
+        ]
+      }
+    },
+    {
+      "node": "rewrite",
+      "detail": "Gemini reformulated the query for one retrieval retry.",
+      "query": "printer hardware paper jam repair instructions guide troubleshoot",
+      "usage": {
+        "input_tokens": 106,
+        "output_tokens": 8,
+        "total_tokens": 114,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      }
+    },
+    {
+      "node": "retrieve",
+      "tool": "search_manuals",
+      "args": {
+        "query": "printer hardware paper jam repair instructions guide troubleshoot"
+      },
+      "result": [
+        {
+          "chunk": 7,
+          "id": "D-167c087a",
+          "source": "DeskSync_support_policy.md",
+          "text": "## Billing and cancellations\nCustomers can request cancellation through their organization's subscription administrator. Refund requests must be reviewed by the billing team against the signed customer agreement. This policy does not provide a universal refund period or automatic refund eligibility. The assistant must not promise a refund or quote an undocumented price.\n\n## Escalation\nIf documented troubleshooting does not resolve an issue, prepare a ticket containing product version, operating system, exact symptoms, error codes, impact, attempted steps and relevant diagnostic evidence. Do not claim the ticket was submitted unless an actual submission system confirms it. Never include authentication secrets or unredacted personal content.",
+          "similarity": 0.5944
+        },
+        {
+          "source": "DeskSync_manual.md",
+          "id": "D-b73ce50c",
+          "chunk": 1,
+          "text": "# DeskSync product manual\n\nThis is sample documentation for the fictional DeskSync desktop collaboration product. Its settings and error codes are for this demonstration only.\n\n## Installation requirements\nDeskSync 2.4 requires Windows 11 or macOS 13 or newer, 500 MB of available disk space, and a working internet connection for sign-in. Download the installer from your organization's approved software portal. After installation, launch DeskSync and sign in with your organization account. Administrative privileges may be required by your organization's device policy.",
+          "similarity": 0.5919
+        },
+        {
+          "chunk": 4,
+          "source": "DeskSync_manual.md",
+          "id": "D-cbd85f06",
+          "text": "## Sign-in and two-factor authentication\nUse the Forgot password option on the organization sign-in page to begin the approved recovery process. If an authentication code is rejected, check that the device clock is synchronized and try a fresh code. Do not share passwords, authentication codes or recovery codes with support. If the account is locked, contact the organization administrator; DeskSync support cannot unlock organization accounts.",
+          "similarity": 0.5726
+        },
+        {
+          "source": "DeskSync_support_policy.md",
+          "id": "D-c19e6177",
+          "chunk": 6,
+          "text": "# DeskSync support policy\n\nThis sample policy applies only to the fictional DeskSync demonstration product.\n\n## Support scope\nThe support team assists with installation, documented sign-in behavior, connectivity and workspace sync. Organization account unlocks and network allow-list changes must be performed by the customer's organization administrator. Desktop hardware failures and unrelated software are outside DeskSync support scope.\n\n## Response targets\nStandard support aims to acknowledge requests within two business days. This is an acknowledgement target, not a resolution guarantee. Priority severity is assigned after support reviews business impact. The agent can draft a ticket but cannot assign a confirmed service-level commitment.",
+          "similarity": 0.5724
+        },
+        {
+          "id": "D-c2f77e01",
+          "chunk": 2,
+          "source": "DeskSync_manual.md",
+          "text": "## Error E104 connection timeout\nE104 means DeskSync could not reach its organization sync service within 30 seconds. First confirm your internet connection works by opening your organization's portal in the browser. In DeskSync, open Settings, then Connection, and choose Test connection. If you are using a VPN, check whether your organization requires it for the sync service. Do not disable required security software. Ask your IT administrator to verify access to the organization sync endpoint. Use Help, Diagnostics, Export diagnostic report to collect the connection result for support. A successful connection test followed by a completed sync verifies recovery.",
+          "similarity": 0.571
+        }
+      ],
+      "detail": "Retrieved Chroma passages using Gemini semantic embeddings."
+    },
+    {
+      "node": "assess",
+      "detail": "Gemini assessed whether the evidence supports a solution.",
+      "result": {
+        "sufficient": false,
+        "relevant_ids": [],
+        "reason": "The retrieved passages discuss billing, installation, sign-in, and connection errors for a software product called DeskSync, but do not contain any instructions or information regarding printer paper jam repair.",
+        "missing_information": [
+          "Printer model and manufacturer instructions",
+          "Steps for accessing the paper path to clear a jam",
+          "Safety guidelines for clearing hardware jams"
+        ]
+      }
+    },
+    {
+      "node": "escalate",
+      "tool": "draft_support_ticket",
+      "detail": "Drafted an escalation ticket; nothing was submitted.",
+      "result": {
+        "summary": "Customer needs assistance repairing a paper jam in their printer.",
+        "category": "product_usage",
+        "attempted_steps": [],
+        "missing_information": [
+          "Printer model and manufacturer instructions",
+          "Steps for accessing the paper path to clear a jam",
+          "Safety guidelines for clearing hardware jams"
+        ],
+        "status": "draft",
+        "submitted": false
+      },
+      "usage": {
+        "input_tokens": 1237,
+        "output_tokens": 241,
+        "total_tokens": 1478,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      }
+    },
+    {
+      "node": "validate",
+      "detail": "Validated document citation IDs.",
+      "result": {
+        "passed": true,
+        "unknown_ids": [],
+        "cited_ids": [
+          "D-167c087a",
+          "D-c19e6177"
+        ],
+        "note": "Checks citation IDs and presence; review whether each claim follows from its cited text."
+      }
+    }
+  ],
+  "retries": 1,
+  "rounds": 0,
+  "answer": "Based on the documentation scope for DeskSync, hardware failures and unrelated software are outside support scope [D-c19e6177], and the provided documentation does not contain any instructions or troubleshooting steps for printer paper jams. I cannot establish a documented solution for this issue.\n\n### Clarifying Questions\n1. What is the make and model of your printer?\n2. Are you experiencing any issues related to DeskSync installation, connectivity, or workspace sync [D-c19e6177]?\n\n### Locally Drafted Escalation Ticket\nBecause documented troubleshooting does not cover this issue [D-167c087a], a support ticket has been locally drafted below [D-c19e6177]. **This ticket has not been submitted [D-167c087a].**\n\n* **Product Version:** DeskSync (Unspecified version)\n* **Operating System:** Unspecified\n* **Exact Symptoms:** Printer paper jam\n* **Error Codes:** None provided\n* **Impact:** Hardware failure / printing interruption\n* **Attempted Steps:** None recorded\n* **Relevant Diagnostic Evidence:** None collected",
+  "checks": {
+    "passed": true,
+    "unknown_ids": [],
+    "cited_ids": [
+      "D-167c087a",
+      "D-c19e6177"
+    ],
+    "note": "Checks citation IDs and presence; review whether each claim follows from its cited text."
+  },
+  "ticket": {
+    "summary": "Customer needs assistance repairing a paper jam in their printer.",
+    "category": "product_usage",
+    "attempted_steps": [],
+    "missing_information": [
+      "Printer model and manufacturer instructions",
+      "Steps for accessing the paper path to clear a jam",
+      "Safety guidelines for clearing hardware jams"
+    ],
+    "status": "draft",
+    "submitted": false
+  },
+  "graph": "---\nconfig:\n  flowchart:\n    curve: linear\n---\ngraph TD;\n\t__start__([<p>__start__</p>]):::first\n\tclassify(classify)\n\tretrieve(retrieve)\n\tassess(assess)\n\trewrite(rewrite)\n\tknown_issues(known_issues)\n\trespond(respond)\n\ttools(tools)\n\tfinish(finish)\n\tescalate(escalate)\n\tvalidate(validate)\n\trepair(repair)\n\t__end__([<p>__end__</p>]):::last\n\t__start__ --> classify;\n\tassess -.-> escalate;\n\tassess -.-> known_issues;\n\tassess -.-> respond;\n\tassess -.-> rewrite;\n\tclassify --> retrieve;\n\tescalate --> validate;\n\tfinish --> validate;\n\tknown_issues --> respond;\n\trespond -.-> finish;\n\trespond -.-> tools;\n\tretrieve --> assess;\n\trewrite --> retrieve;\n\ttools -.-> finish;\n\ttools -.-> respond;\n\tvalidate -.-> __end__;\n\tvalidate -.-> repair;\n\trepair --> __end__;\n\tclassDef default fill:#f2f0ff,line-height:1.2\n\tclassDef first fill-opacity:0\n\tclassDef last fill:#bfb6fc\n",
+  "model": "gemini-3.5-flash-lite"
+}
